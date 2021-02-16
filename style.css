@@ -1,114 +1,154 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
 }
 
 fieldset {
-    border: 0;
+  border: 0;
 }
 
 body {
-    background-color: #f0f8ff;
-    color: #59429d;
+  background-color: #f2f2f2;
 
-    font-family: sans-serif;
-    font-size: 1em;
-
-    margin-left: 36%;
-    margin-top: 2%;
-
-    justify-content: center;
-}
-
-input, select, textarea, button {
-    font-family: sans-serif;
-    font-size: 1em;
-    color: #59429d;
-    border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
 }
 
 .content-initial {
-    margin-bottom: 20px;
+  margin: 20px 0;
+
+  display: flex;
+
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
 }
 
-#title {
-    font-family: sans-serif;
-    color: #380B61;
-
-    margin-left: 7%;
+.content-initial h2 {
+  text-transform: uppercase;
 }
 
-#sub-title {
-    font-family: sans-serif;
-    color: #380B61;
+form {
+  width: 100%;
 
-    margin-left: 10%;   
+  margin: 0 auto;
 }
 
-.field-check {
-    display: inline-block;
+.container {
+  width: 80%;
+
+  margin: 0 auto;
 }
 
-.field::before, .field::after {
-    display: table;
+.group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.field input {
+  width: 100%;
+
+  margin-bottom: .8rem;
+  padding: 4px 8px;
+
+  border-radius: 5px;
+  border: 1px solid #000;
+
+  outline: none;
+  font-size: 1.1rem;
 }
 
-.field::after {
-    clear: both;
+.field-email label {
+  display: block;
 }
 
-.field {
-    margin-bottom: 1em;
+.field-email input {
+  width: 100%;
+
+  margin-bottom: .8rem;
+  padding: 4px 8px;
+
+  border-radius: 5px;
+  border: 1px solid #000;
+
+  outline: none;
+  font-size: 1.1rem;
 }
 
-.field label {
-    margin-bottom: .2em;
-    color: #59429d;
-    display: block;
+.field-stack {
+  width: 100%;
 }
 
-fieldset.group .field {
-    float: left;
-    margin-right: 1em;
+.field-stack label {
+  display: block;
+
+  margin: 7px 0;
 }
 
-.field input[type="text"], .field input[type="email"], .field select, .field textarea {
-    padding: .2em;
-    border: 1px solid #59429d;
-    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
-    display: block;
+.field-experience {
+  margin: 15px 0;
 }
 
-.field select option {
-    padding-right: 1em;
+.field-experience select {
+  outline: none;
+
+  width: 120px;
+  height: 22px;
 }
 
-.field input:focus, .field select:focus, .field textarea:focus {
-    background: #e0e0f8;
+.field-textarea {
+  margin: 15px 0;
+}
+
+.field-textarea textarea {
+  margin: 15px 0;
+
+  width: 100%;
+  height: 100px;
+
+  padding: 5px 8px;
+  outline: none;
 }
 
 .button-form {
-    font-size: 1em;
-    background: #59429d;
-    border: 0;
-    margin-bottom: 1em;
-    color: #fff;
-    padding: .2em .6em;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 70%;
-    left: 52%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+  width: 150px;
+
+  display: block;
+
+  margin: 7px auto 1.5rem auto;
+  padding: 10px 9px;
+
+  font-size: 1.1rem;
+
+  outline: none;
+
+  border: none;
+  border-radius: 12px;
+
+  background-color: #59429d;
+  color: #fff;
 }
 
-.button-form:hover {
-    background: #ccbbff;
-    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
-    text-shadow: none;
-}
 
-.button-form, select {
-    cursor: pointer;
+/* Media queries */
+@media (min-width: 768px) {
+  form {
+    max-width: 600px;
+  }
+
+  .group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* or 1fr 1fr 1fr */
+    gap: 2rem;
+  }
+
+  .field label {
+    display: block;
+  }
+
+  .field input {
+    width: 100%;
+  }
 }
